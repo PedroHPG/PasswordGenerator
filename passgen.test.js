@@ -1,0 +1,1 @@
+import { passgen } from './passgen';
