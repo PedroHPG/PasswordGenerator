@@ -1,1 +1,1 @@
-export const passgen = () => '';
+export const passgen = (length) => 'Invalid input';
