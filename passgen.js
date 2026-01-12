@@ -1,4 +1,8 @@
 const prompt = require('prompt-sync')();
+const lowerCharSet = "abcdefghijklmnopqrstuvwxyz";
+const upperCharSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numCharSet = "1234567890";
+const specialCharSet = "!@#$%^&*()_+=-";
 
 //Asks user for desired length
 let length = prompt("How many characters should your password be? Recommended: 8 or more. Enter number here: ");
