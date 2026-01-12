@@ -14,6 +14,20 @@ let numbers = prompt("Would you like to use numbers? Enter 'n' for no, anything 
 let special = prompt("Would you like to use special characters? Enter 'n' for no, anything else for yes. Enter here: ")
 
 //Prepare character sets and create password variable
+let passwordCharSet = "";
+if (lowercase != 'n'){
+    passwordCharSet.append(lowerCharSet);
+}
+if (uppercase != 'n'){
+    passwordCharSet.append(upperCharSet);
+}
+if (numbers != 'n'){
+    passwordCharSet.append(numCharSet);
+}
+if (special != 'n'){
+    passwordCharSet.append(specialCharSet);
+}
+console.log(`Possible characters for your password were: ${passwordCharSet}`);
 
 //Loop for desired length
 
