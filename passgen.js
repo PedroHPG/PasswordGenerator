@@ -1,3 +1,5 @@
+const prompt = require('prompt-sync')();
+
 //Asks user for desired length
 
 //Ask user if they want lowercase
