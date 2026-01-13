@@ -30,10 +30,13 @@ if (special != 'n'){
 console.log(`Possible characters for your password were: ${passwordCharSet}`);
 
 let password = "";
+let nextChar = "";
 //Loop for desired length
 for(let i = 0; i < length; i++){
     //Generate secure random value and add to password
-    password.concat(passwordCharSet[Math.random * (passwordCharSet.length - 1)]);
+    nextChar = passwordCharSet.charAt(Math.floor(Math.random * (passwordCharSet.length - 1)));
+    console.log(nextChar);
+    password.concat(nextChar);
 }
 
 //return generated password
