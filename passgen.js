@@ -29,8 +29,12 @@ if (special != 'n'){
 }
 console.log(`Possible characters for your password were: ${passwordCharSet}`);
 
+let password = "";
 //Loop for desired length
-
-//Generate secure random value and add to password
+for(let i = 0; i < length; i++){
+    //Generate secure random value and add to password
+    password.append(passwordCharSet[Math.random * (passwordCharSet.length - 1)]);
+}
 
 //return generated password
+console.log(`Your new password is: ${password}. Keep it somewhere safe!`);
