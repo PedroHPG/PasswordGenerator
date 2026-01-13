@@ -16,16 +16,16 @@ let special = prompt("Would you like to use special characters? Enter 'n' for no
 //Prepare character sets and create password variable
 let passwordCharSet = "";
 if (lowercase != 'n'){
-    passwordCharSet.concat(lowerCharSet);
+    passwordCharSet = passwordCharSet.concat(lowerCharSet);
 }
 if (uppercase != 'n'){
-    passwordCharSet.concat(upperCharSet);
+    passwordCharSet = passwordCharSet.concat(upperCharSet);
 }
 if (numbers != 'n'){
-    passwordCharSet.concat(numCharSet);
+    passwordCharSet = passwordCharSet.concat(numCharSet);
 }
 if (special != 'n'){
-    passwordCharSet.concat(specialCharSet);
+    passwordCharSet = passwordCharSet.concat(specialCharSet);
 }
 console.log(`Possible characters for your password were: ${passwordCharSet}`);
 
@@ -34,9 +34,9 @@ let nextChar = "";
 //Loop for desired length
 for(let i = 0; i < length; i++){
     //Generate secure random value and add to password
-    nextChar = passwordCharSet.charAt(Math.floor(Math.random * (passwordCharSet.length - 1)));
+    nextChar = passwordCharSet.charAt(Math.floor(Math.random * (passwordCharSet.length - 0)));
     console.log(nextChar);
-    password.concat(nextChar);
+    password = password.concat(nextChar);
 }
 
 //return generated password
