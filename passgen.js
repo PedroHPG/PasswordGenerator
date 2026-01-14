@@ -31,13 +31,17 @@ console.log(`Possible characters for your password were: ${passwordCharSet}`);
 
 let password = "";
 let nextChar = "";
+let randNum = 0;
 //Loop for desired length
 for(let i = 0; i < length; i++){
     //Generate secure random value and add to password
-    nextChar = passwordCharSet.charAt(Math.floor(Math.random * (passwordCharSet.length - 0)));
+    randNum = Math.floor(Math.random() * (passwordCharSet.length - 0));
+    nextChar = passwordCharSet.charAt(randNum);
     console.log(nextChar);
     password = password.concat(nextChar);
 }
 
 //return generated password
 console.log(`Your new password is: ${password}. Keep it somewhere safe!`);
+
+//TODO USE MORE SECURE RANDOMNESS
